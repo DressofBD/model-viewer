@@ -15,10 +15,10 @@
   <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.jqueryui.min.js"></script>
 
-  <script src="/js/taffydb-master/taffy-min.js"></script>
-  <script src="/js/maplabel-compiled.js"></script>
-  <script src="/js/moment.js"></script>
-  <script src="/js/short_notice_list.js"></script>
+  <script src="js/taffydb-master/taffy-min.js"></script>
+  <script src="js/maplabel-compiled.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/short_notice_list.js"></script>
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
 
@@ -1534,4 +1534,5 @@ path: /var/www/afw/lib/symfony
 
 
 
+.css
 left_column
