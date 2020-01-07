@@ -81,7 +81,7 @@
 
 </script>
 <div id="left_column" style="width:70%;float:left;">
-  <div id="filter_form" style="background:#ededed; padding:10px; overflow:hidden;">
+  <div id="filter_form" class="for-pc" style="background:#ededed; padding:10px; overflow:hidden;">
     <div class="mission_count_container" style="">Flights<span id="mission_count" style=""></span></div>
     <!-- drop-down form -->
     <div class="filter_field" style="">
@@ -127,10 +127,57 @@
         <br/><button id="zoom_to_route">Reset Table</button>
     </div>
     <div id="filter"></div><!-- not shown to users -->
-  </div><!-- /filter_form -->
+  </div><!-- /filter_form for pc-->
   <div id="map_canvas" style="width:100%;height:auto"></div>
 </div>
 <div id="right_column" style="width:30%;float:left;">
+  <div id="filter_form" class="for-mobile" style="background:#ededed; padding:10px; overflow:hidden;">
+    <div class="mission_count_container" style="">Flights<span id="mission_count" style=""></span></div>
+    <!-- drop-down form -->
+    <div class="filter_field" style="">
+        Home to Origin Distance
+        <br/><select id="originDistance" onchange="filter_db()">
+            <option value="9999">All</option>
+            <option value="10">10 miles or less</option>
+            <option value="25">25 miles or less</option>
+            <option value="30">30 miles or less</option>
+            <option value="50">50 miles or less</option>
+        </select>
+    </div>
+    <div id="col1" class="filter_field" style="">
+        Destination Airport to Facility Distance
+        <br/><select id="destDistance" onchange="filter_db()">
+            <option value="9999">All</option>
+            <option value="10">10 miles or less</option>
+            <option value="25">25 miles or less</option>
+            <option value="30">30 miles or less</option>
+            <option value="50">50 miles or less</option>
+        </select>
+    </div>
+    <div class="filter_field" style="">
+        Earliest Date
+        <br/><input type="text" id="start_date" onchange="filter_db()"/>
+    </div>
+    <div class="filter_field" style="">
+        Latest Date
+        <br/><input type="text" id="end_date" onchange="filter_db()"/>
+    </div>
+    <div class="filter_field" style="">
+        Seats Available
+        <br/><select id="seatsAvailable" onchange="filter_db()">
+            <option value="all">All</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+    <div class="filter_field" style="">
+        &nbsp;
+        <br/><button id="zoom_to_route">Reset Table</button>
+    </div>
+    <div id="filter"></div><!-- not shown to users -->
+  </div><!-- /filter_form for smaller screen-->
 <h3>List of flights</h3>
   <table id="pending_deadheads_list" style="font-size:14px;">
     <thead>
@@ -306,6 +353,12 @@ function sfWebDebugShowOnlyLogLines(type)
       margin: 0;
       padding: 0;
     }
+    .for-pc{
+      display: block;
+    }
+    .for-mobile{
+      display: none;
+    }
     table.dataTable tbody th, table.dataTable tbody td {
       text-align: center;
     }
@@ -354,6 +407,12 @@ function sfWebDebugShowOnlyLogLines(type)
     #right_column{
       display: table-header-group !important;
     }
+    .for-mobile{
+      display:  block !important;
+    }
+    .for-pc{
+      display: none !important;
+    }
   }
   @media(max-width: 450px){
     #map_canvas{
@@ -368,4 +427,3 @@ function sfWebDebugShowOnlyLogLines(type)
 
   </body>
 </html>
-
