@@ -39,19 +39,12 @@
         }
         body {padding:0; margin:0; font:12px/130% sans-serif;}
         input, select {margin-top:4px;}
-        .mission_count_container {
-        float: left;
-        margin-right: 20px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 18px;
-        padding: 5px;
-      }
+        .mission_count_container {float:left; background:#fff; text-align:center; margin-right:20px; padding:6px 15px; border-radius:30px;}
         #mission_count {display:block; font-size:24px; font-weight:bold; margin-top:5px;}
         .filter_field {float:left; margin-right:7px; padding-right:7px; padding-top:5px; border-right:1px solid #ddd;}
         @media (max-width: 569px) {
 
-            .mission_count_container {float:none; text-align:center; margin-right:0; padding:6px 15px; border-radius:30px;}
+            .mission_count_container {float:none; background:#fff; text-align:center; margin-right:0; padding:6px 15px; border-radius:30px;}
             #mission_count {display:block; font-size:24px; font-weight:bold; margin-top:5px;}
             .filter_field {float:none; text-align:center; margin-right:0; padding-right:0; padding:7px 0 7px 0; border-bottom:1px solid #ddd; border-right:none;}
 
@@ -139,7 +132,7 @@
 </div>
 <div id="right_column" style="width:35%;float:left;">
   <div id="filter_form" class="for-mobile" style="background:#ededed; padding:10px; overflow:hidden;">
-    <div class="mission_count_container" style="">Flights<span id="mission_count" style=""></span></div>
+    <div class="mission_count_container" style="">Flights<span id="mission_count" style="">234</span></div>
     <!-- drop-down form -->
     <div class="filter_field" style="">
         Home to Origin Distance
@@ -449,5 +442,3 @@ function sfWebDebugShowOnlyLogLines(type)
 
   </body>
 </html>
-
-
