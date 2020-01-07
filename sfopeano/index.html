@@ -39,12 +39,19 @@
         }
         body {padding:0; margin:0; font:12px/130% sans-serif;}
         input, select {margin-top:4px;}
-        .mission_count_container {float:left; background:#fff; text-align:center; margin-right:20px; padding:6px 15px; border-radius:30px;}
+        .mission_count_container {
+        float: left;
+        margin-right: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 5px;
+      }
         #mission_count {display:block; font-size:24px; font-weight:bold; margin-top:5px;}
         .filter_field {float:left; margin-right:7px; padding-right:7px; padding-top:5px; border-right:1px solid #ddd;}
         @media (max-width: 569px) {
 
-            .mission_count_container {float:none; background:#fff; text-align:center; margin-right:0; padding:6px 15px; border-radius:30px;}
+            .mission_count_container {float:none; text-align:center; margin-right:0; padding:6px 15px; border-radius:30px;}
             #mission_count {display:block; font-size:24px; font-weight:bold; margin-top:5px;}
             .filter_field {float:none; text-align:center; margin-right:0; padding-right:0; padding:7px 0 7px 0; border-bottom:1px solid #ddd; border-right:none;}
 
@@ -426,12 +433,15 @@ function sfWebDebugShowOnlyLogLines(type)
       display: none !important;
     }
   }
-  @media(max-width: 450px){
+  @media(max-width: 480px){
     #map_canvas{
       height: 600px !important;
     }
     #pending_deadheads_list{
       width: 350px !important;
+    }
+    .dataTable .sorting.ui-state-default{
+      padding: 10px 0 !important;
     }
 
   }
@@ -439,3 +449,5 @@ function sfWebDebugShowOnlyLogLines(type)
 
   </body>
 </html>
+
+
